@@ -18,7 +18,7 @@ def scrape():
     # NASA Mars News
     url = "https://redplanetscience.com/"
     browser.visit(url)
-    time.sleep(3)
+    time.sleep(1)
 
     html = browser.html
     soup = bs(html, 'html.parser')
@@ -42,7 +42,7 @@ def scrape():
     # JPL Mars Space Featured Images
     url1 = "https://spaceimages-mars.com/"
     browser.visit(url1)
-    time.sleep(3)
+    time.sleep(1)
 
     html = browser.html
     soup = bs(html, 'html.parser')
@@ -62,7 +62,7 @@ def scrape():
     # Mars Hemispheres
     url = "https://marshemispheres.com/"
     browser.visit(url)
-    time.sleep(3)
+    time.sleep(1)
 
     html = browser.html
     soup = bs(html, 'html.parser')
@@ -98,8 +98,8 @@ def scrape():
     print('Scraping Complete')
 
     mars_data = {
-        "Latest_Title": latest_title,
-        "Latest_Paragraph": latest_body,
+        "Latest_Title": latest_title1,
+        "Latest_Paragraph": latest_body1,
         "Featured_Image_Url": featured_image_url,
         "Mars_Fact": html_table,
         "Hemisphere_Title_and_Images": hemisphere_image_urls}
